@@ -1,0 +1,84 @@
+.slider {
+
+	&-value {
+		margin: 0 0 20px;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		position: relative;
+	}
+
+	&-item {
+		font-size: 13px;
+		position: relative;
+		display: flex;
+		align-self: flex-end;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 15px;
+			width: 1px;
+			height: 19px;
+			background-image: url(../images/dots.png);
+			background-repeat: no-repeat;
+		}
+		&:last-child {
+			width: 92px;
+
+			&::before {
+				display: none;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 15px;
+				width: 1px;
+				height: 19px;
+				background-image: url(../images/dots.png);
+				background-repeat: no-repeat;
+			}
+
+		}
+	}
+
+	&-junior {
+		position: absolute;
+		top: 0;
+		left: 33.33%;
+		width: 125px;
+	}
+
+	&-middle {
+		position: absolute;
+		top: 0;
+		left: 66.66%;
+		width: 180px;
+	}
+
+}
+
+.ui-widget{
+
+	&-header {
+		background-color: #e8e8e8;
+	}
+
+	&.ui-widget-content {
+		border: none;
+		background: linear-gradient(to right, rgba(205,178,242,1) 0%,rgba(177,160,223,1) 50%,rgba(137,134,195,1) 100%);
+		clip-path: polygon(0 78%, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+.ui-corner-all {
+	border-radius: 0;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	opacity: 0;
+}
